@@ -8,7 +8,6 @@ def non_constructible_change(arr):
     result = [seq for i in range(1, len(arr) + 1) for seq in itertools.combinations(arr, i)]
     while True:
         list_tuples = list(result)
-        list_tuples.sort()
         list_tuples.sort(key=lambda k: sum(k))
         for j in list_tuples:
             if sum(j) == target:
